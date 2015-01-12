@@ -3,13 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class PhpCodeSniffer < Formula
   homepage 'http://pear.php.net/package/PHP_CodeSniffer'
-  url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.5.6.tgz'
-  sha1 '11d1640fb6b9012cabbd6185b8988849def50eb1'
-
-  devel do
-    url 'http://download.pear.php.net/package/PHP_CodeSniffer-2.0.0.tgz'
-    sha1 '26bbeee20f95f7590450266f837104293aa14453'
-  end
+  url 'http://download.pear.php.net/package/PHP_CodeSniffer-2.1.0.tgz'
+  sha1 '462bfa441c2f3a9997eab0ee0932bcfd0aa5237f'
 
   depends_on PhpMetaRequirement
 
@@ -75,8 +70,6 @@ class PhpCodeSniffer < Formula
   end
 
   def caveats; <<-EOS.undent
-    Install the alpha release of PHP CodeSniffer with the --devel option.
-
     Verify your installation by running:
 
       #{phpcs_script_name} --version
